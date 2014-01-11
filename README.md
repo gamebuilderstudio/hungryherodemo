@@ -12,6 +12,6 @@ The ActionScript source code of this project is __FREE__. You can redistribute a
 
 Overview
 ---
-A step by step tutorial on re-creating this game cane be found on http:://gamebuilderstudio.com/gtv
+A step by step tutorial on re-creating this game cane be found on http://gamebuilderstudio.com/gtv
 
 Hungry Hero GameBuilder Studio Project
