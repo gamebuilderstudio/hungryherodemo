@@ -1,0 +1,2259 @@
+<gbx name="HungryHeroDemo" creationDate="Tue Dec 17 15:38:11 GMT-0600 2013" version="v0.9.Build-399">
+  <appSettings>
+    <publishSettings current="DEFAULT">
+      <profiles>
+        <profile name="DEFAULT" targetPlatform=""/>
+      </profiles>
+    </publishSettings>
+    <projectSettings>
+      <profiles>
+        <profile name="DEFAULT">
+          <width>1024</width>
+          <height>768</height>
+          <renderingMode>GPU</renderingMode>
+          <gpuRenderMode>auto</gpuRenderMode>
+          <gpuContextProfile>baselineExtended</gpuContextProfile>
+        </profile>
+      </profiles>
+    </projectSettings>
+  </appSettings>
+  <game engine="PBE" currentGameTypeId="pbe" lastLevel="1">
+    <globals>
+      <globalGameObject>
+        <gameObject name="Globals" uid="5AC7B278-4BC9-31CA-FB57-FCCC28A33D70" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="GlobalObject" sourceId="null">
+          <visible>true</visible>
+          <assetId>null</assetId>
+          <levelId>null</levelId>
+          <layerId>null</layerId>
+          <parentLayerId>null</parentLayerId>
+          <enableInteraction>true</enableInteraction>
+          <position x="0" y="0"/>
+          <volume x="0" y="0"/>
+          <gameEntity>
+            <metaData/>
+            <entity name="Globals">
+              <component type="com.pblabs.engine.components::DataComponent" name="Data"/>
+            </entity>
+          </gameEntity>
+        </gameObject>
+      </globalGameObject>
+    </globals>
+    <objects>
+      <gameObject name="Background" uid="8F215095-8D6A-73AE-02A7-FD624A9DD8C2" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Basic Sprite" sourceId="null">
+        <visible>true</visible>
+        <assetId>E049C766-3754-AE05-C984-FCCD2DBC788E</assetId>
+        <levelId>D27B6160-815E-9FA7-A409-FCCC2858C701</levelId>
+        <layerId>5105DEF7-9608-D9A8-D43A-FD624A9D2DD6</layerId>
+        <parentLayerId>05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="512" y="383"/>
+        <volume x="1024" y="768"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="Background">
+            <component type="com.pblabs.sound::BackgroundMusicComponent" name="BackgroundSoundPlayer">
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <updatePriority>0</updatePriority>
+              <music type="com.pblabs.engine.resource.MP3Resource">
+                <filename>bgWelcome.mp3</filename>
+              </music>
+              <autoStart type="Boolean">true</autoStart>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="BasicSpatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>768</y>
+                <x>1024</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>383</y>
+                <x>512</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.SpriteRenderer" entityName="Background" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+            <component type="com.pblabs.rendering2D::SpriteRenderer" name="Renderer">
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <size type="flash.geom.Point">
+                <y>768</y>
+                <x>1024</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <fileName>bgWelcome.jpg</fileName>
+              <position type="flash.geom.Point">
+                <y>383</y>
+                <x>512</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>0</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>384</y>
+                <x>512</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701" componentName="Scene0"/>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.rotation]]></rotationProperty>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="HungryHero" uid="AB8E13EA-902A-DE88-C25A-FD62CC692884" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Basic Sprite" sourceId="null">
+        <visible>true</visible>
+        <assetId>D19187FE-95D1-731A-AD03-FCCD2E3099FE</assetId>
+        <levelId>D27B6160-815E-9FA7-A409-FCCC2858C701</levelId>
+        <layerId>816DCF60-4EB9-BFD0-D962-FD62CC6A1989</layerId>
+        <parentLayerId>05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="61.5" y="199.5"/>
+        <volume x="411" y="399"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="HungryHero">
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="BasicSpatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>399</y>
+                <x>411</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y type="Number">199.5</y>
+                <x type="Number">61.5</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.SpriteSheetRenderer" entityName="HungryHero" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+            <component type="com.mslabs.pbe.triggers::RulesComponent" name="Logic_Animation">
+              <actionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">1</length>
+                <0 type="com.pblabs.triggers.actions.InterpolateAction">
+                  <action type="com.pblabs.triggers.actions.InterpolateAction">
+                    <label>FloatingAnimation</label>
+                    <runtoCompletion type="Boolean">true</runtoCompletion>
+                    <propertyReference type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></propertyReference>
+                    <durationReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[1.3]]></durationReference>
+                    <delayReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[0]]></delayReference>
+                    <fromValueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ Self.BasicSpatial.position ]]></fromValueReference>
+                    <valueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ setPoint(  Self.BasicSpatial.x , Self.BasicSpatial.y-80 ) ]]></valueReference>
+                    <repeatCountReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[-1]]></repeatCountReference>
+                    <easingClass>com.pblabs.animation.easing::Sine</easingClass>
+                    <easingFunction>easeInOut</easingFunction>
+                    <pingpong type="Boolean">true</pingpong>
+                  </action>
+                  <label>AnimateFromLeft</label>
+                  <runtoCompletion type="Boolean">true</runtoCompletion>
+                  <propertyReference type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></propertyReference>
+                  <durationReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[1.3]]></durationReference>
+                  <delayReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[0]]></delayReference>
+                  <fromValueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ setPoint( -300,  Self.BasicSpatial.position.y  ) ]]></fromValueReference>
+                  <valueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ Self.BasicSpatial.position ]]></valueReference>
+                  <repeatCountReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[1]]></repeatCountReference>
+                  <easingClass>com.pblabs.animation.easing::Sine</easingClass>
+                  <easingFunction>easeInOut</easingFunction>
+                  <pingpong type="Boolean">false</pingpong>
+                </0>
+              </actionsList>
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <otherwiseActionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </otherwiseActionsList>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <conditionsRule>ALL</conditionsRule>
+              <conditionsList type="__AS3__.vec.Vector.&lt;com.mslabs.pbe.vos::ConditionDataVO>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </conditionsList>
+            </component>
+            <component type="com.pblabs.rendering2D::SpriteSheetRenderer" name="Renderer">
+              <overrideSizePerFrame type="Boolean">true</overrideSizePerFrame>
+              <spriteIndex>56</spriteIndex>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <size type="flash.geom.Point">
+                <y>399</y>
+                <x>411</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <position type="flash.geom.Point">
+                <y>199</y>
+                <x>61</x>
+              </position>
+              <zIndex>1</zIndex>
+              <layerIndex>0</layerIndex>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <rendererOrder>0</rendererOrder>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701" componentName="Scene0"/>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <blendMode>normal</blendMode>
+              <alpha>1</alpha>
+              <spriteSheet type="com.pblabs.rendering2D.spritesheet.SpriteSheetComponent" entityName="HungryHero" componentName="SpriteSheet"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <spriteSheetProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@SpriteSheet]]></spriteSheetProperty>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D.spritesheet::SpriteSheetComponent" name="SpriteSheet">
+              <divider type="com.pblabs.rendering2D.spritesheet.TexturePackerSheetDivider"/>
+              <center type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </center>
+              <modifiers type="Array"/>
+              <image type="com.pblabs.engine.resource.ImageResource">
+                <filename>HungryHeroSheet.png</filename>
+              </image>
+              <cached type="Boolean">true</cached>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="WelcomeTitle" uid="33A35B1A-A475-6F43-7574-FEF877924136" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Basic Sprite" sourceId="null">
+        <visible>true</visible>
+        <assetId>D19187FE-95D1-731A-AD03-FCCD2E3099FE</assetId>
+        <levelId>D27B6160-815E-9FA7-A409-FCCC2858C701</levelId>
+        <layerId>9009D752-052B-9CC3-F7DF-FEF877A2F4D3</layerId>
+        <parentLayerId>05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="587.5" y="82.5"/>
+        <volume x="304" y="208"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="WelcomeTitle">
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="BasicSpatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>208</y>
+                <x>304</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y type="Number">82.5</y>
+                <x type="Number">587.5</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.SpriteSheetRenderer" entityName="WelcomeTitle" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+            <component type="com.mslabs.pbe.triggers::RulesComponent" name="Logic_Animation">
+              <actionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">1</length>
+                <0 type="com.pblabs.triggers.actions.InterpolateAction">
+                  <action type="com.pblabs.triggers.actions.InterpolateAction">
+                    <label>FloatingAnimation</label>
+                    <runtoCompletion type="Boolean">true</runtoCompletion>
+                    <propertyReference type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></propertyReference>
+                    <durationReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[1.3]]></durationReference>
+                    <delayReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[0]]></delayReference>
+                    <fromValueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ Self.BasicSpatial.position ]]></fromValueReference>
+                    <valueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ setPoint(  Self.BasicSpatial.x , Self.BasicSpatial.y-50 ) ]]></valueReference>
+                    <repeatCountReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[-1]]></repeatCountReference>
+                    <easingClass>com.pblabs.animation.easing::Sine</easingClass>
+                    <easingFunction>easeInOut</easingFunction>
+                    <pingpong type="Boolean">true</pingpong>
+                  </action>
+                  <label>AnimateFromRightToLeft</label>
+                  <runtoCompletion type="Boolean">true</runtoCompletion>
+                  <propertyReference type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></propertyReference>
+                  <durationReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[1.5]]></durationReference>
+                  <delayReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[0.2]]></delayReference>
+                  <fromValueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ setPoint(  Game.Screen.fullScreenWidth+300,  Self.BasicSpatial.position.y  ) ]]></fromValueReference>
+                  <valueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ Self.BasicSpatial.position ]]></valueReference>
+                  <repeatCountReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[1]]></repeatCountReference>
+                  <easingClass>com.pblabs.animation.easing::Sine</easingClass>
+                  <easingFunction>easeInOut</easingFunction>
+                  <pingpong type="Boolean">false</pingpong>
+                </0>
+              </actionsList>
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <otherwiseActionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </otherwiseActionsList>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <conditionsRule>ALL</conditionsRule>
+              <conditionsList type="__AS3__.vec.Vector.&lt;com.mslabs.pbe.vos::ConditionDataVO>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </conditionsList>
+            </component>
+            <component type="com.mslabs.pbe.triggers::RulesComponent" name="Logic_InitialPosition">
+              <actionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">1</length>
+                <0 type="com.pblabs.triggers.actions.PropertySetter">
+                  <label>SetInitialPosition</label>
+                  <source type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ setPoint(  Game.Screen.fullScreenWidth + 300 ,  Self.BasicSpatial.position.y  ) ]]></source>
+                  <property type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></property>
+                  <propertyType>Expression</propertyType>
+                  <passReferences type="Boolean">true</passReferences>
+                </0>
+              </actionsList>
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <otherwiseActionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </otherwiseActionsList>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <conditionsRule>ALL</conditionsRule>
+              <conditionsList type="__AS3__.vec.Vector.&lt;com.mslabs.pbe.vos::ConditionDataVO>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </conditionsList>
+            </component>
+            <component type="com.pblabs.rendering2D::SpriteSheetRenderer" name="Renderer">
+              <overrideSizePerFrame type="Boolean">true</overrideSizePerFrame>
+              <spriteIndex>58</spriteIndex>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <size type="flash.geom.Point">
+                <y>208</y>
+                <x>304</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <position type="flash.geom.Point">
+                <y>82</y>
+                <x>587</x>
+              </position>
+              <zIndex>2</zIndex>
+              <layerIndex>0</layerIndex>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <rendererOrder>0</rendererOrder>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701" componentName="Scene0"/>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <blendMode>normal</blendMode>
+              <alpha>1</alpha>
+              <spriteSheet type="com.pblabs.rendering2D.spritesheet.SpriteSheetComponent" entityName="WelcomeTitle" componentName="SpriteSheet"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <spriteSheetProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@SpriteSheet]]></spriteSheetProperty>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D.spritesheet::SpriteSheetComponent" name="SpriteSheet">
+              <divider type="com.pblabs.rendering2D.spritesheet.TexturePackerSheetDivider"/>
+              <center type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </center>
+              <modifiers type="Array"/>
+              <image type="com.pblabs.engine.resource.ImageResource">
+                <filename>HungryHeroSheet.png</filename>
+              </image>
+              <cached type="Boolean">true</cached>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="PlayButton" uid="AA6D662D-4E5C-D5AD-28CA-FF05F7B66D7B" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Basic Sprite" sourceId="null">
+        <visible>true</visible>
+        <assetId>D19187FE-95D1-731A-AD03-FCCD2E3099FE</assetId>
+        <levelId>D27B6160-815E-9FA7-A409-FCCC2858C701</levelId>
+        <layerId>D703AAA8-442C-8F9E-16BA-FF05F7BC27A3</layerId>
+        <parentLayerId>05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="755.5" y="412.5"/>
+        <volume x="176" y="106"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="PlayButton">
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="BasicSpatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>106</y>
+                <x>176</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y type="Number">412.5</y>
+                <x type="Number">755.5</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.SpriteSheetRenderer" entityName="PlayButton" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+            <component type="com.mslabs.pbe.triggers::RulesComponent" name="Logic_Animation">
+              <actionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">1</length>
+                <0 type="com.pblabs.triggers.actions.InterpolateAction">
+                  <action type="com.pblabs.triggers.actions.InterpolateAction">
+                    <label>FloatingAnimation</label>
+                    <runtoCompletion type="Boolean">true</runtoCompletion>
+                    <propertyReference type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></propertyReference>
+                    <durationReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[1.3]]></durationReference>
+                    <delayReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[0]]></delayReference>
+                    <fromValueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ Self.BasicSpatial.position ]]></fromValueReference>
+                    <valueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ setPoint(  Self.BasicSpatial.x , Self.BasicSpatial.y-20 ) ]]></valueReference>
+                    <repeatCountReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[-1]]></repeatCountReference>
+                    <easingClass>com.pblabs.animation.easing::Sine</easingClass>
+                    <easingFunction>easeInOut</easingFunction>
+                    <pingpong type="Boolean">true</pingpong>
+                  </action>
+                  <label>AnimateFromRightToLeft</label>
+                  <runtoCompletion type="Boolean">true</runtoCompletion>
+                  <propertyReference type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></propertyReference>
+                  <durationReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[1.5]]></durationReference>
+                  <delayReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[0.4]]></delayReference>
+                  <fromValueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ setPoint(  Game.Screen.fullScreenWidth+300,  Self.BasicSpatial.position.y  ) ]]></fromValueReference>
+                  <valueReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ Self.BasicSpatial.position ]]></valueReference>
+                  <repeatCountReference type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[1]]></repeatCountReference>
+                  <easingClass>com.pblabs.animation.easing::Sine</easingClass>
+                  <easingFunction>easeInOut</easingFunction>
+                  <pingpong type="Boolean">false</pingpong>
+                </0>
+              </actionsList>
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <otherwiseActionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </otherwiseActionsList>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <conditionsRule>ALL</conditionsRule>
+              <conditionsList type="__AS3__.vec.Vector.&lt;com.mslabs.pbe.vos::ConditionDataVO>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </conditionsList>
+            </component>
+            <component type="com.mslabs.pbe.triggers::RulesComponent" name="Logic_InitialPosition">
+              <actionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">1</length>
+                <0 type="com.pblabs.triggers.actions.PropertySetter">
+                  <label>SetInitialPosition</label>
+                  <source type="com.pblabs.engine.scripting.ExpressionReference"><![CDATA[ setPoint(  Game.Screen.fullScreenWidth + 300 ,  Self.BasicSpatial.position.y  ) ]]></source>
+                  <property type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></property>
+                  <propertyType>Expression</propertyType>
+                  <passReferences type="Boolean">true</passReferences>
+                </0>
+              </actionsList>
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <otherwiseActionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </otherwiseActionsList>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <conditionsRule>ALL</conditionsRule>
+              <conditionsList type="__AS3__.vec.Vector.&lt;com.mslabs.pbe.vos::ConditionDataVO>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </conditionsList>
+            </component>
+            <component type="com.mslabs.pbe.triggers::RulesComponent" name="Logic_TouchDown">
+              <actionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">2</length>
+                <0 type="com.pblabs.triggers.actions.PropertySetter">
+                  <label>ScaleDown</label>
+                  <source type="flash.geom.Point">
+                    <y type="Number">0.8</y>
+                    <x type="Number">0.8</x>
+                  </source>
+                  <property type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Renderer.scale]]></property>
+                  <propertyType>Point</propertyType>
+                  <passReferences type="Boolean">true</passReferences>
+                </0>
+                <1 type="com.mslabs.pbe.triggers.actions.PlaySoundAction">
+                  <label>PlayHitSound</label>
+                  <sound type="com.pblabs.engine.resource.MP3Resource">
+                    <filename>buttonhit.mp3</filename>
+                  </sound>
+                </1>
+              </actionsList>
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <otherwiseActionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </otherwiseActionsList>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <conditionsRule>ALL</conditionsRule>
+              <conditionsList type="__AS3__.vec.Vector.&lt;com.mslabs.pbe.vos::ConditionDataVO>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">2</length>
+                <0 type="com.mslabs.pbe.vos.ConditionDataVO">
+                  <type>EVENT</type>
+                  <data type="com.mslabs.pbe.vos.MouseEventConditionData">
+                    <owner type="com.pblabs.engine.entity.Entity" nameReference="PlayButton"/>
+                    <eventType>mouseDown</eventType>
+                    <overEntity type="Boolean">true</overEntity>
+                  </data>
+                </0>
+                <1 type="com.mslabs.pbe.vos.ConditionDataVO">
+                  <type>EVENT</type>
+                  <data type="com.mslabs.pbe.vos.TouchEventConditionData">
+                    <owner type="com.pblabs.engine.entity.Entity" nameReference="PlayButton"/>
+                    <eventType>touchBegin</eventType>
+                    <overEntity type="Boolean">true</overEntity>
+                  </data>
+                </1>
+              </conditionsList>
+            </component>
+            <component type="com.mslabs.pbe.triggers::RulesComponent" name="Logic_TouchUp">
+              <actionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">1</length>
+                <0 type="com.mslabs.pbe.triggers.actions.ChangeLevelAction">
+                  <label>Change Level_1</label>
+                  <levelIndex>-1</levelIndex>
+                  <forceUnload type="Boolean">true</forceUnload>
+                </0>
+              </actionsList>
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <otherwiseActionsList type="__AS3__.vec.Vector.&lt;com.pblabs.triggers.actions::IAction>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">0</length>
+              </otherwiseActionsList>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <conditionsRule>ALL</conditionsRule>
+              <conditionsList type="__AS3__.vec.Vector.&lt;com.mslabs.pbe.vos::ConditionDataVO>">
+                <fixed type="Boolean">false</fixed>
+                <length type="int">1</length>
+                <0 type="com.mslabs.pbe.vos.ConditionDataVO">
+                  <type>EVENT</type>
+                  <data type="com.mslabs.pbe.vos.TouchEventConditionData">
+                    <owner type="com.pblabs.engine.entity.Entity" nameReference="PlayButton"/>
+                    <eventType>touchEnd</eventType>
+                    <overEntity type="Boolean">true</overEntity>
+                  </data>
+                </0>
+              </conditionsList>
+            </component>
+            <component type="com.pblabs.rendering2D::SpriteSheetRenderer" name="Renderer">
+              <overrideSizePerFrame type="Boolean">true</overrideSizePerFrame>
+              <spriteIndex>57</spriteIndex>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <size type="flash.geom.Point">
+                <y>106</y>
+                <x>176</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <position type="flash.geom.Point">
+                <y>412</y>
+                <x>755</x>
+              </position>
+              <zIndex>3</zIndex>
+              <layerIndex>0</layerIndex>
+              <registrationPoint type="flash.geom.Point">
+                <y>50</y>
+                <x>82</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <rendererOrder>0</rendererOrder>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701" componentName="Scene0"/>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <blendMode>normal</blendMode>
+              <alpha>1</alpha>
+              <spriteSheet type="com.pblabs.rendering2D.spritesheet.SpriteSheetComponent" entityName="PlayButton" componentName="SpriteSheet"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <spriteSheetProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@SpriteSheet]]></spriteSheetProperty>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D.spritesheet::SpriteSheetComponent" name="SpriteSheet">
+              <divider type="com.pblabs.rendering2D.spritesheet.TexturePackerSheetDivider"/>
+              <center type="flash.geom.Point">
+                <y>50</y>
+                <x>82</x>
+              </center>
+              <modifiers type="Array"/>
+              <image type="com.pblabs.engine.resource.ImageResource">
+                <filename>HungryHeroSheet.png</filename>
+              </image>
+              <cached type="Boolean">true</cached>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="SkyBackgroundLayer" uid="C6CDCFA2-AC72-9985-F757-FFCDFA239B0B" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Repeating Sprite" sourceId="null">
+        <visible>true</visible>
+        <assetId>B448483A-767E-1CB3-846C-FCCC296F92CC</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>B96BF06F-FC32-B1E8-B80B-FFCDFA23F6D2</layerId>
+        <parentLayerId>70CA2E7A-EC53-AF12-25C8-FD5F55C5CF18</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="0" y="0"/>
+        <volume x="1024" y="1024"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="SkyBackgroundLayer">
+            <component type="com.pblabs.rendering2D::ScrollingBitmapRenderer" name="Renderer">
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <size type="flash.geom.Point">
+                <y>1024</y>
+                <x>1024</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <fileName>bgLayer1.jpg</fileName>
+              <position type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>0</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene0"/>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <autoCorrectImageSize type="Boolean">true</autoCorrectImageSize>
+              <scrollSpeed type="flash.geom.Point">
+                <y>0</y>
+                <x>-20</x>
+              </scrollSpeed>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">false</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>1024</y>
+                <x>1024</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.ScrollingBitmapRenderer" entityName="SkyBackgroundLayer" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="BGLayer2" uid="1334059B-85D8-F1C5-6230-FFCE997C61A7" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Repeating Sprite" sourceId="null">
+        <visible>true</visible>
+        <assetId>B448483A-767E-1CB3-846C-FCCC296F92CC</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>95559F3D-68F5-66A3-2FA9-FFCE997EC242</layerId>
+        <parentLayerId>70CA2E7A-EC53-AF12-25C8-FD5F55C5CF18</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="0" y="405"/>
+        <volume x="1024" y="256"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="BGLayer2">
+            <component type="com.pblabs.rendering2D::ScrollingBitmapRenderer" name="Renderer">
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <size type="flash.geom.Point">
+                <y>256</y>
+                <x>1024</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <fileName>bgLayer2.png</fileName>
+              <position type="flash.geom.Point">
+                <y>405</y>
+                <x>0</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>1</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene0"/>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <autoCorrectImageSize type="Boolean">true</autoCorrectImageSize>
+              <scrollSpeed type="flash.geom.Point">
+                <y>0</y>
+                <x>-168</x>
+              </scrollSpeed>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">false</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>256</y>
+                <x>1024</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>405</y>
+                <x>0</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.ScrollingBitmapRenderer" entityName="BGLayer2" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="BGLayer3" uid="8E4E1E09-3565-B9D4-FA04-FFCEE1E70A7D" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Repeating Sprite" sourceId="null">
+        <visible>true</visible>
+        <assetId>B448483A-767E-1CB3-846C-FCCC296F92CC</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>53F1BFF6-94A2-9CC5-29D4-FFCEE1E92B9A</layerId>
+        <parentLayerId>70CA2E7A-EC53-AF12-25C8-FD5F55C5CF18</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="0" y="502"/>
+        <volume x="1024" y="256"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="BGLayer3">
+            <component type="com.pblabs.rendering2D::ScrollingBitmapRenderer" name="Renderer">
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <size type="flash.geom.Point">
+                <y>256</y>
+                <x>1024</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <fileName>bgLayer3.png</fileName>
+              <position type="flash.geom.Point">
+                <y>502</y>
+                <x>0</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>2</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene0"/>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <autoCorrectImageSize type="Boolean">true</autoCorrectImageSize>
+              <scrollSpeed type="flash.geom.Point">
+                <y>0</y>
+                <x>-368</x>
+              </scrollSpeed>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">false</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>256</y>
+                <x>1024</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>502</y>
+                <x>0</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.ScrollingBitmapRenderer" entityName="BGLayer3" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="BGLayer4" uid="B6094516-A475-4567-103D-FFCF14A9FD9C" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Repeating Sprite" sourceId="null">
+        <visible>true</visible>
+        <assetId>B448483A-767E-1CB3-846C-FCCC296F92CC</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>D62F7CA9-9F67-FACE-72CA-FFCF14ACA216</layerId>
+        <parentLayerId>70CA2E7A-EC53-AF12-25C8-FD5F55C5CF18</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="2" y="643"/>
+        <volume x="1024" y="256"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="BGLayer4">
+            <component type="com.pblabs.rendering2D::ScrollingBitmapRenderer" name="Renderer">
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <size type="flash.geom.Point">
+                <y>256</y>
+                <x>1024</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <fileName>bgLayer4.png</fileName>
+              <position type="flash.geom.Point">
+                <y>643</y>
+                <x>2</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>3</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene0"/>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <autoCorrectImageSize type="Boolean">true</autoCorrectImageSize>
+              <scrollSpeed type="flash.geom.Point">
+                <y>0</y>
+                <x>-680</x>
+              </scrollSpeed>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">false</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>256</y>
+                <x>1024</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>643</y>
+                <x>2</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.ScrollingBitmapRenderer" entityName="BGLayer4" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="PauseButton" uid="E2A4F12C-DFD2-03BC-2C11-026D43E824C0" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Basic Sprite" sourceId="null">
+        <visible>true</visible>
+        <assetId>D19187FE-95D1-731A-AD03-FCCD2E3099FE</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>CE5DD38B-3E64-5D7C-4AF4-026D43E95A02</layerId>
+        <parentLayerId>96846FEB-1AB1-3FA2-8FB3-026CC7340DD1</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="15" y="17"/>
+        <volume x="40" y="40"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="PauseButton">
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="BasicSpatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>40</y>
+                <x>40</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>17</y>
+                <x>15</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.SpriteSheetRenderer" entityName="PauseButton" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+            <component type="com.pblabs.rendering2D::SpriteSheetRenderer" name="Renderer">
+              <overrideSizePerFrame type="Boolean">true</overrideSizePerFrame>
+              <spriteIndex>44</spriteIndex>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <size type="flash.geom.Point">
+                <y>40</y>
+                <x>40</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <position type="flash.geom.Point">
+                <y>17</y>
+                <x>15</x>
+              </position>
+              <zIndex>6</zIndex>
+              <layerIndex>0</layerIndex>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <rendererOrder>0</rendererOrder>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene1"/>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <blendMode>normal</blendMode>
+              <alpha>1</alpha>
+              <spriteSheet type="com.pblabs.rendering2D.spritesheet.SpriteSheetComponent" entityName="PauseButton" componentName="SpriteSheet"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <spriteSheetProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@SpriteSheet]]></spriteSheetProperty>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@BasicSpatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D.spritesheet::SpriteSheetComponent" name="SpriteSheet">
+              <divider type="com.pblabs.rendering2D.spritesheet.TexturePackerSheetDivider">
+                <resource type="com.pblabs.engine.resource.JSONResource">
+                  <filename>HungryHeroSheet.json</filename>
+                </resource>
+              </divider>
+              <center type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </center>
+              <modifiers type="Array"/>
+              <image type="com.pblabs.engine.resource.ImageResource">
+                <filename>HungryHeroSheet.png</filename>
+              </image>
+              <cached type="Boolean">true</cached>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="ScoreTxt" uid="71D5B071-09CB-4647-FC6B-026DE01D4578" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Text Object" sourceId="null">
+        <visible>true</visible>
+        <assetId>null</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>C5A96C8B-4729-9346-D2CA-026DE01E1C57</layerId>
+        <parentLayerId>96846FEB-1AB1-3FA2-8FB3-026CC7340DD1</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="782" y="45"/>
+        <volume x="25" y="32"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="ScoreTxt">
+            <component type="com.pblabs.engine.components::DataComponent" name="Properties">
+              <score type="int">0</score>
+            </component>
+            <component type="com.pblabs.rendering2D::UITextRendererComponent" name="Renderer">
+              <fontName>Arial</fontName>
+              <text>0</text>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <wordWrap type="Boolean">false</wordWrap>
+              <fontData type="com.pblabs.engine.resource.DataResource">
+                <filename>fontScoreValue.fnt</filename>
+              </fontData>
+              <fontImage type="com.pblabs.engine.resource.ImageResource">
+                <filename>fontScoreValue.png</filename>
+              </fontImage>
+              <fontColor>16777215</fontColor>
+              <autoResize type="Boolean">true</autoResize>
+              <fontSize>30</fontSize>
+              <size type="flash.geom.Point">
+                <y>32</y>
+                <x>25</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <type>dynamic</type>
+              <position type="flash.geom.Point">
+                <y>45</y>
+                <x>782</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>4</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene1"/>
+              <fontItalic type="Boolean">false</fontItalic>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <fontBold type="Boolean">false</fontBold>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>32</y>
+                <x>25</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>45</y>
+                <x>782</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.UITextRendererComponent" entityName="ScoreTxt" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="LivesLabel" uid="5E7405C4-2AE1-371C-00F6-026E65651CA9" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Text Object" sourceId="null">
+        <visible>true</visible>
+        <assetId>null</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>78584214-684C-9C7A-665D-026E656D2645</layerId>
+        <parentLayerId>96846FEB-1AB1-3FA2-8FB3-026CC7340DD1</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="77.5" y="16.5"/>
+        <volume x="43" y="19"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="LivesLabel">
+            <component type="com.pblabs.rendering2D::UITextRendererComponent" name="Renderer">
+              <fontName>Arial</fontName>
+              <text>LIVES</text>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <wordWrap type="Boolean">false</wordWrap>
+              <fontData type="com.pblabs.engine.resource.DataResource">
+                <filename>fontScoreLabel.fnt</filename>
+              </fontData>
+              <fontImage type="com.pblabs.engine.resource.ImageResource">
+                <filename>fontScoreLabel.png</filename>
+              </fontImage>
+              <fontColor>16777215</fontColor>
+              <autoResize type="Boolean">true</autoResize>
+              <fontSize>30</fontSize>
+              <size type="flash.geom.Point">
+                <y>19</y>
+                <x>43</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <type>dynamic</type>
+              <position type="flash.geom.Point">
+                <y>16</y>
+                <x>77</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>0</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene1"/>
+              <fontItalic type="Boolean">false</fontItalic>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <fontBold type="Boolean">false</fontBold>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>19</y>
+                <x>43</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y type="Number">16.5</y>
+                <x type="Number">77.5</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.UITextRendererComponent" entityName="LivesLabel" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="ScoreLabel" uid="999E402A-335D-F121-49BF-026EACC778B4" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Text Object" sourceId="null">
+        <visible>true</visible>
+        <assetId>null</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>52FD9DEE-464E-DB06-7C1F-026EACCEB76D</layerId>
+        <parentLayerId>96846FEB-1AB1-3FA2-8FB3-026CC7340DD1</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="777.5" y="14.5"/>
+        <volume x="59" y="19"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="ScoreLabel">
+            <component type="com.pblabs.rendering2D::UITextRendererComponent" name="Renderer">
+              <fontName>Arial</fontName>
+              <text>SCORES</text>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <wordWrap type="Boolean">false</wordWrap>
+              <fontData type="com.pblabs.engine.resource.DataResource">
+                <filename>fontScoreLabel.fnt</filename>
+              </fontData>
+              <fontImage type="com.pblabs.engine.resource.ImageResource">
+                <filename>fontScoreLabel.png</filename>
+              </fontImage>
+              <fontColor>16777215</fontColor>
+              <autoResize type="Boolean">true</autoResize>
+              <fontSize>30</fontSize>
+              <size type="flash.geom.Point">
+                <y>19</y>
+                <x>59</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <type>dynamic</type>
+              <position type="flash.geom.Point">
+                <y>14</y>
+                <x>777</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>1</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene1"/>
+              <fontItalic type="Boolean">false</fontItalic>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <fontBold type="Boolean">false</fontBold>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>19</y>
+                <x>59</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y type="Number">14.5</y>
+                <x type="Number">777.5</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.UITextRendererComponent" entityName="ScoreLabel" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="DistanceLabel" uid="89BAF380-BE37-B7B1-05DE-026F06F8B219" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Text Object" sourceId="null">
+        <visible>true</visible>
+        <assetId>null</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>76255EC4-3C99-0294-62C5-026F07006787</layerId>
+        <parentLayerId>96846FEB-1AB1-3FA2-8FB3-026CC7340DD1</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="904" y="14.5"/>
+        <volume x="68" y="19"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="DistanceLabel">
+            <component type="com.pblabs.rendering2D::UITextRendererComponent" name="Renderer">
+              <fontName>Arial</fontName>
+              <text>DISTANCE</text>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <wordWrap type="Boolean">false</wordWrap>
+              <fontData type="com.pblabs.engine.resource.DataResource">
+                <filename>fontScoreLabel.fnt</filename>
+              </fontData>
+              <fontImage type="com.pblabs.engine.resource.ImageResource">
+                <filename>fontScoreLabel.png</filename>
+              </fontImage>
+              <fontColor>16777215</fontColor>
+              <autoResize type="Boolean">true</autoResize>
+              <fontSize>30</fontSize>
+              <size type="flash.geom.Point">
+                <y>19</y>
+                <x>68</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <type>dynamic</type>
+              <position type="flash.geom.Point">
+                <y>14</y>
+                <x>904</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>2</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene1"/>
+              <fontItalic type="Boolean">false</fontItalic>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <fontBold type="Boolean">false</fontBold>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>19</y>
+                <x>68</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y type="Number">14.5</y>
+                <x>904</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.UITextRendererComponent" entityName="DistanceLabel" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="LivesTxt" uid="D309D2ED-05B6-FA63-81CC-026F5FAC20DC" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Text Object" sourceId="null">
+        <visible>true</visible>
+        <assetId>null</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>97121280-01ED-0A92-9A68-026F5FC3EE36</layerId>
+        <parentLayerId>96846FEB-1AB1-3FA2-8FB3-026CC7340DD1</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="83.5" y="45"/>
+        <volume x="25" y="32"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="LivesTxt">
+            <component type="com.pblabs.engine.components::DataComponent" name="Properties">
+              <heroLives type="int">5</heroLives>
+            </component>
+            <component type="com.pblabs.rendering2D::UITextRendererComponent" name="Renderer">
+              <fontName>Arial</fontName>
+              <text>0</text>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <wordWrap type="Boolean">false</wordWrap>
+              <fontData type="com.pblabs.engine.resource.DataResource">
+                <filename>fontScoreValue.fnt</filename>
+              </fontData>
+              <fontImage type="com.pblabs.engine.resource.ImageResource">
+                <filename>fontScoreValue.png</filename>
+              </fontImage>
+              <fontColor>16777215</fontColor>
+              <autoResize type="Boolean">true</autoResize>
+              <fontSize>30</fontSize>
+              <size type="flash.geom.Point">
+                <y>32</y>
+                <x>25</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <type>dynamic</type>
+              <position type="flash.geom.Point">
+                <y>45</y>
+                <x>83</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>3</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene1"/>
+              <fontItalic type="Boolean">false</fontItalic>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <fontBold type="Boolean">false</fontBold>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>32</y>
+                <x>25</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>45</y>
+                <x type="Number">83.5</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.UITextRendererComponent" entityName="LivesTxt" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+      <gameObject name="DistanceTxt" uid="E2F85B82-DAD3-7FD8-B9BD-026F7578157A" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="Text Object" sourceId="null">
+        <visible>true</visible>
+        <assetId>null</assetId>
+        <levelId>BE83D682-6C01-E166-86FC-FD5F55C4FF96</levelId>
+        <layerId>FE4F3320-76F2-1754-420D-026F7592A64C</layerId>
+        <parentLayerId>96846FEB-1AB1-3FA2-8FB3-026CC7340DD1</parentLayerId>
+        <enableInteraction>true</enableInteraction>
+        <position x="904" y="45"/>
+        <volume x="25" y="32"/>
+        <gameEntity>
+          <metaData/>
+          <entity name="DistanceTxt">
+            <component type="com.pblabs.engine.components::DataComponent" name="Properties">
+              <distance type="int">0</distance>
+            </component>
+            <component type="com.pblabs.rendering2D::UITextRendererComponent" name="Renderer">
+              <fontName>Arial</fontName>
+              <text>0</text>
+              <mouseEnabled type="Boolean">true</mouseEnabled>
+              <wordWrap type="Boolean">false</wordWrap>
+              <fontData type="com.pblabs.engine.resource.DataResource">
+                <filename>fontScoreValue.fnt</filename>
+              </fontData>
+              <fontImage type="com.pblabs.engine.resource.ImageResource">
+                <filename>fontScoreValue.png</filename>
+              </fontImage>
+              <fontColor>16777215</fontColor>
+              <autoResize type="Boolean">true</autoResize>
+              <fontSize>30</fontSize>
+              <size type="flash.geom.Point">
+                <y>32</y>
+                <x>25</x>
+              </size>
+              <scale type="flash.geom.Point">
+                <y>1</y>
+                <x>1</x>
+              </scale>
+              <type>dynamic</type>
+              <position type="flash.geom.Point">
+                <y>45</y>
+                <x>904</x>
+              </position>
+              <layerIndex>0</layerIndex>
+              <zIndex>11</zIndex>
+              <rendererOrder>0</rendererOrder>
+              <registrationPoint type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </registrationPoint>
+              <positionOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </positionOffset>
+              <scene type="com.pblabs.rendering2D.DisplayObjectScene" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="Scene1"/>
+              <fontItalic type="Boolean">false</fontItalic>
+              <rotationOffset>0</rotationOffset>
+              <rotation>0</rotation>
+              <alpha>1</alpha>
+              <blendMode>normal</blendMode>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <fontBold type="Boolean">false</fontBold>
+              <renderKey>0</renderKey>
+              <positionProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.position]]></positionProperty>
+              <snapToNearestPixels type="Boolean">true</snapToNearestPixels>
+              <sizeProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.size]]></sizeProperty>
+              <rotationProperty type="com.pblabs.engine.entity.PropertyReference"><![CDATA[@Spatial.rotation]]></rotationProperty>
+            </component>
+            <component type="com.pblabs.rendering2D::SimpleSpatialComponent" name="Spatial">
+              <registerForTicks type="Boolean">true</registerForTicks>
+              <linearVelocity type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </linearVelocity>
+              <size type="flash.geom.Point">
+                <y>32</y>
+                <x>25</x>
+              </size>
+              <spatialManager type="com.pblabs.nape.NapeManagerComponent" entityName="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96" componentName="SpatialManager"/>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>45</y>
+                <x>904</x>
+              </position>
+              <spriteForPointChecks type="com.pblabs.rendering2D.UITextRendererComponent" entityName="DistanceTxt" componentName="Renderer"/>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <updatePriority>0</updatePriority>
+              <angularVelocity>0</angularVelocity>
+            </component>
+          </entity>
+        </gameEntity>
+      </gameObject>
+    </objects>
+    <levels>
+      <level uid="D27B6160-815E-9FA7-A409-FCCC2858C701" index="0" displayName="Level 0" type="com.gbs.gameeditor.common.model.pbe.levels::PBELevel">
+        <layers>
+          <layer uid="3B903862-8AD1-C61E-C6D4-FCCC2873F43A" levelId="D27B6160-815E-9FA7-A409-FCCC2858C701" assetId="null" gameObjectId="null" sceneLayerName="Scene0" displayName="Scene View/Camera" stackOrder="0" duplicatable="false" opened="true" type="SCENE" locked="false"/>
+          <layer uid="05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38" levelId="D27B6160-815E-9FA7-A409-FCCC2858C701" assetId="null" gameObjectId="null" sceneLayerName="SceneLayer0" displayName="Scene Layer - 0" stackOrder="0" duplicatable="true" opened="true" type="CONTAINER_GAMEOBJECTS" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="3B903862-8AD1-C61E-C6D4-FCCC2873F43A"/>
+          </layer>
+          <layer uid="5105DEF7-9608-D9A8-D43A-FD624A9D2DD6" levelId="D27B6160-815E-9FA7-A409-FCCC2858C701" assetId="null" gameObjectId="8F215095-8D6A-73AE-02A7-FD624A9DD8C2" sceneLayerName="null" displayName="Background" stackOrder="0" duplicatable="true" opened="false" type="GAMEOBJECT" locked="true">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38"/>
+          </layer>
+          <layer uid="816DCF60-4EB9-BFD0-D962-FD62CC6A1989" levelId="D27B6160-815E-9FA7-A409-FCCC2858C701" assetId="null" gameObjectId="AB8E13EA-902A-DE88-C25A-FD62CC692884" sceneLayerName="null" displayName="HungryHero" stackOrder="1" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38"/>
+          </layer>
+          <layer uid="9009D752-052B-9CC3-F7DF-FEF877A2F4D3" levelId="D27B6160-815E-9FA7-A409-FCCC2858C701" assetId="null" gameObjectId="33A35B1A-A475-6F43-7574-FEF877924136" sceneLayerName="null" displayName="WelcomeTitle" stackOrder="2" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38"/>
+          </layer>
+          <layer uid="D703AAA8-442C-8F9E-16BA-FF05F7BC27A3" levelId="D27B6160-815E-9FA7-A409-FCCC2858C701" assetId="null" gameObjectId="AA6D662D-4E5C-D5AD-28CA-FF05F7B66D7B" sceneLayerName="null" displayName="PlayButton" stackOrder="3" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38"/>
+          </layer>
+        </layers>
+        <scene>
+          <entity name="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701">
+            <component type="com.pblabs.nape.NapeManagerComponent" name="SpatialManager">
+              <worldBounds type="flash.geom.Rectangle">
+                <topLeft type="flash.geom.Point">
+                  <y>-5000</y>
+                  <x>-5000</x>
+                </topLeft>
+                <size type="flash.geom.Point">
+                  <y>10000</y>
+                  <x>10000</x>
+                </size>
+                <right>5000</right>
+                <left>-5000</left>
+                <top>-5000</top>
+                <bottom>5000</bottom>
+                <bottomRight type="flash.geom.Point">
+                  <y>5000</y>
+                  <x>5000</x>
+                </bottomRight>
+                <x>-5000</x>
+                <y>-5000</y>
+                <height>10000</height>
+                <width>10000</width>
+              </worldBounds>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <gravity type="flash.geom.Point">
+                <y>600</y>
+                <x>0</x>
+              </gravity>
+              <materialManager type="com.pblabs.nape.NapeMaterialManager">
+                <materials type="flash.utils.Dictionary" childType="com.pblabs.nape.MaterialVO">
+                  <Ice name="Ice">
+                    <elasticity>0.3</elasticity>
+                    <staticFriction>0.1</staticFriction>
+                    <dynamicFriction>0.03</dynamicFriction>
+                    <rollingFriction>0.0001</rollingFriction>
+                    <density>0.9</density>
+                  </Ice>
+                  <Glass name="Glass">
+                    <elasticity>0.4</elasticity>
+                    <staticFriction>0.94</staticFriction>
+                    <dynamicFriction>0.4</dynamicFriction>
+                    <rollingFriction>0.002</rollingFriction>
+                    <density>2.6</density>
+                  </Glass>
+                  <Steel name="Steel">
+                    <elasticity>0.2</elasticity>
+                    <staticFriction>0.74</staticFriction>
+                    <dynamicFriction>0.57</dynamicFriction>
+                    <rollingFriction>0.001</rollingFriction>
+                    <density>7.8</density>
+                  </Steel>
+                  <Wood name="Wood">
+                    <elasticity>0.4</elasticity>
+                    <staticFriction>0.38</staticFriction>
+                    <dynamicFriction>0.2</dynamicFriction>
+                    <rollingFriction>0.005</rollingFriction>
+                    <density>0.7</density>
+                  </Wood>
+                  <Sand name="Sand">
+                    <elasticity>-1</elasticity>
+                    <staticFriction>0.6</staticFriction>
+                    <dynamicFriction>0.45</dynamicFriction>
+                    <rollingFriction>16</rollingFriction>
+                    <density>1.6</density>
+                  </Sand>
+                  <Rubber name="Rubber">
+                    <elasticity>0.8</elasticity>
+                    <staticFriction>1.4</staticFriction>
+                    <dynamicFriction>1</dynamicFriction>
+                    <rollingFriction>0.01</rollingFriction>
+                    <density>1.5</density>
+                  </Rubber>
+                </materials>
+              </materialManager>
+              <visualDebugging type="Boolean">false</visualDebugging>
+            </component>
+            <component type="com.pblabs.rendering2D.DisplayObjectScene" name="Scene0">
+              <sceneViewName>SceneView</sceneViewName>
+              <sceneAlignment type="com.pblabs.rendering2D.SceneAlignment">TOP_LEFT</sceneAlignment>
+              <layerIndex>0</layerIndex>
+              <zoom>1</zoom>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </position>
+              <ignoreTimeScale type="Boolean">true</ignoreTimeScale>
+              <minZoom type="Number">0.01</minZoom>
+              <maxZoom>1</maxZoom>
+              <layers type="Array"/>
+              <trackByOffset type="Boolean">true</trackByOffset>
+              <trackOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </trackOffset>
+            </component>
+          </entity>
+          <view>
+            <name>SceneView</name>
+            <visible type="Boolean">true</visible>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+            <tabEnabled type="Boolean">false</tabEnabled>
+            <tabIndex>-1</tabIndex>
+            <mouseEnabled type="Boolean">true</mouseEnabled>
+            <doubleClickEnabled type="Boolean">false</doubleClickEnabled>
+            <soundTransform type="flash.media.SoundTransform">
+              <pan>0</pan>
+              <leftToLeft>1</leftToLeft>
+              <leftToRight>0</leftToRight>
+              <rightToRight>1</rightToRight>
+              <volume>1</volume>
+              <rightToLeft>0</rightToLeft>
+            </soundTransform>
+            <needsSoftKeyboard type="Boolean">false</needsSoftKeyboard>
+            <scaleZ>1</scaleZ>
+            <rotationX>0</rotationX>
+            <rotationY>0</rotationY>
+            <rotation>0</rotation>
+            <mouseChildren type="Boolean">true</mouseChildren>
+            <tabChildren type="Boolean">true</tabChildren>
+            <rotationZ>0</rotationZ>
+            <cacheAsBitmap type="Boolean">false</cacheAsBitmap>
+            <filters type="Array"/>
+            <blendMode>normal</blendMode>
+            <transform type="flash.geom.Transform">
+              <colorTransform type="flash.geom.ColorTransform">
+                <color>0</color>
+                <blueMultiplier>1</blueMultiplier>
+                <greenMultiplier>1</greenMultiplier>
+                <redMultiplier>1</redMultiplier>
+                <redOffset>0</redOffset>
+                <alphaMultiplier>1</alphaMultiplier>
+                <greenOffset>0</greenOffset>
+                <alphaOffset>0</alphaOffset>
+                <blueOffset>0</blueOffset>
+              </colorTransform>
+              <matrix type="flash.geom.Matrix">
+                <b>0</b>
+                <c>0</c>
+                <a>1</a>
+                <tx>0</tx>
+                <d>1</d>
+                <ty>0</ty>
+              </matrix>
+            </transform>
+            <buttonMode type="Boolean">false</buttonMode>
+            <alpha>1</alpha>
+            <scaleX>1</scaleX>
+            <useHandCursor type="Boolean">true</useHandCursor>
+            <scaleY>1</scaleY>
+            <width>1024</width>
+            <height>768</height>
+          </view>
+        </scene>
+      </level>
+      <level uid="BE83D682-6C01-E166-86FC-FD5F55C4FF96" index="1" displayName="Level 1" type="com.gbs.gameeditor.common.model.pbe.levels::PBELevel">
+        <layers>
+          <layer uid="A5F430D6-4C08-D533-F099-FD5F55C535AE" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="null" sceneLayerName="Scene0" displayName="Scene View/Camera" stackOrder="0" duplicatable="false" opened="true" type="SCENE" locked="false"/>
+          <layer uid="70CA2E7A-EC53-AF12-25C8-FD5F55C5CF18" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="null" sceneLayerName="SceneLayer0" displayName="Scene Layer - 0" stackOrder="0" duplicatable="true" opened="true" type="CONTAINER_GAMEOBJECTS" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="A5F430D6-4C08-D533-F099-FD5F55C535AE"/>
+          </layer>
+          <layer uid="B96BF06F-FC32-B1E8-B80B-FFCDFA23F6D2" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="C6CDCFA2-AC72-9985-F757-FFCDFA239B0B" sceneLayerName="null" displayName="SkyBackgroundLayer" stackOrder="0" duplicatable="true" opened="false" type="GAMEOBJECT" locked="true">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="70CA2E7A-EC53-AF12-25C8-FD5F55C5CF18"/>
+          </layer>
+          <layer uid="95559F3D-68F5-66A3-2FA9-FFCE997EC242" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="1334059B-85D8-F1C5-6230-FFCE997C61A7" sceneLayerName="null" displayName="BGLayer2" stackOrder="1" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="70CA2E7A-EC53-AF12-25C8-FD5F55C5CF18"/>
+          </layer>
+          <layer uid="53F1BFF6-94A2-9CC5-29D4-FFCEE1E92B9A" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="8E4E1E09-3565-B9D4-FA04-FFCEE1E70A7D" sceneLayerName="null" displayName="BGLayer3" stackOrder="2" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="70CA2E7A-EC53-AF12-25C8-FD5F55C5CF18"/>
+          </layer>
+          <layer uid="D62F7CA9-9F67-FACE-72CA-FFCF14ACA216" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="B6094516-A475-4567-103D-FFCF14A9FD9C" sceneLayerName="null" displayName="BGLayer4" stackOrder="3" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="70CA2E7A-EC53-AF12-25C8-FD5F55C5CF18"/>
+          </layer>
+          <layer uid="9CB30950-438D-A68B-E03C-026CBCF47F95" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="null" sceneLayerName="Scene1" displayName="Scene Container - 1" stackOrder="1" duplicatable="false" opened="true" type="SCENE" locked="false"/>
+          <layer uid="96846FEB-1AB1-3FA2-8FB3-026CC7340DD1" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="null" sceneLayerName="SceneLayer0" displayName="Scene Layer - 0" stackOrder="0" duplicatable="true" opened="true" type="CONTAINER_GAMEOBJECTS" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="9CB30950-438D-A68B-E03C-026CBCF47F95"/>
+          </layer>
+          <layer uid="CE5DD38B-3E64-5D7C-4AF4-026D43E95A02" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="E2A4F12C-DFD2-03BC-2C11-026D43E824C0" sceneLayerName="null" displayName="PauseButton" stackOrder="6" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="96846FEB-1AB1-3FA2-8FB3-026CC7340DD1"/>
+          </layer>
+          <layer uid="C5A96C8B-4729-9346-D2CA-026DE01E1C57" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="71D5B071-09CB-4647-FC6B-026DE01D4578" sceneLayerName="null" displayName="ScoreTxt" stackOrder="4" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="96846FEB-1AB1-3FA2-8FB3-026CC7340DD1"/>
+          </layer>
+          <layer uid="78584214-684C-9C7A-665D-026E656D2645" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="5E7405C4-2AE1-371C-00F6-026E65651CA9" sceneLayerName="null" displayName="LivesLabel" stackOrder="0" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="96846FEB-1AB1-3FA2-8FB3-026CC7340DD1"/>
+          </layer>
+          <layer uid="52FD9DEE-464E-DB06-7C1F-026EACCEB76D" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="999E402A-335D-F121-49BF-026EACC778B4" sceneLayerName="null" displayName="ScoreLabel" stackOrder="1" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="96846FEB-1AB1-3FA2-8FB3-026CC7340DD1"/>
+          </layer>
+          <layer uid="76255EC4-3C99-0294-62C5-026F07006787" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="89BAF380-BE37-B7B1-05DE-026F06F8B219" sceneLayerName="null" displayName="DistanceLabel" stackOrder="2" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="96846FEB-1AB1-3FA2-8FB3-026CC7340DD1"/>
+          </layer>
+          <layer uid="97121280-01ED-0A92-9A68-026F5FC3EE36" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="D309D2ED-05B6-FA63-81CC-026F5FAC20DC" sceneLayerName="null" displayName="LivesTxt" stackOrder="3" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="96846FEB-1AB1-3FA2-8FB3-026CC7340DD1"/>
+          </layer>
+          <layer uid="FE4F3320-76F2-1754-420D-026F7592A64C" levelId="BE83D682-6C01-E166-86FC-FD5F55C4FF96" assetId="null" gameObjectId="E2F85B82-DAD3-7FD8-B9BD-026F7578157A" sceneLayerName="null" displayName="DistanceTxt" stackOrder="5" duplicatable="true" opened="false" type="GAMEOBJECT" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="96846FEB-1AB1-3FA2-8FB3-026CC7340DD1"/>
+          </layer>
+        </layers>
+        <scene>
+          <entity name="Scene_BE83D682-6C01-E166-86FC-FD5F55C4FF96">
+            <component type="com.pblabs.nape.NapeManagerComponent" name="SpatialManager">
+              <worldBounds type="flash.geom.Rectangle">
+                <topLeft type="flash.geom.Point">
+                  <y>-5000</y>
+                  <x>-5000</x>
+                </topLeft>
+                <size type="flash.geom.Point">
+                  <y>10000</y>
+                  <x>10000</x>
+                </size>
+                <right>5000</right>
+                <left>-5000</left>
+                <top>-5000</top>
+                <bottom>5000</bottom>
+                <bottomRight type="flash.geom.Point">
+                  <y>5000</y>
+                  <x>5000</x>
+                </bottomRight>
+                <x>-5000</x>
+                <y>-5000</y>
+                <height>10000</height>
+                <width>10000</width>
+              </worldBounds>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+              <gravity type="flash.geom.Point">
+                <y>600</y>
+                <x>0</x>
+              </gravity>
+              <materialManager type="com.pblabs.nape.NapeMaterialManager">
+                <materials type="flash.utils.Dictionary" childType="com.pblabs.nape.MaterialVO">
+                  <Ice name="Ice">
+                    <elasticity>0.3</elasticity>
+                    <staticFriction>0.1</staticFriction>
+                    <dynamicFriction>0.03</dynamicFriction>
+                    <rollingFriction>0.0001</rollingFriction>
+                    <density>0.9</density>
+                  </Ice>
+                  <Glass name="Glass">
+                    <elasticity>0.4</elasticity>
+                    <staticFriction>0.94</staticFriction>
+                    <dynamicFriction>0.4</dynamicFriction>
+                    <rollingFriction>0.002</rollingFriction>
+                    <density>2.6</density>
+                  </Glass>
+                  <Steel name="Steel">
+                    <elasticity>0.2</elasticity>
+                    <staticFriction>0.74</staticFriction>
+                    <dynamicFriction>0.57</dynamicFriction>
+                    <rollingFriction>0.001</rollingFriction>
+                    <density>7.8</density>
+                  </Steel>
+                  <Wood name="Wood">
+                    <elasticity>0.4</elasticity>
+                    <staticFriction>0.38</staticFriction>
+                    <dynamicFriction>0.2</dynamicFriction>
+                    <rollingFriction>0.005</rollingFriction>
+                    <density>0.7</density>
+                  </Wood>
+                  <Sand name="Sand">
+                    <elasticity>-1</elasticity>
+                    <staticFriction>0.6</staticFriction>
+                    <dynamicFriction>0.45</dynamicFriction>
+                    <rollingFriction>16</rollingFriction>
+                    <density>1.6</density>
+                  </Sand>
+                  <Rubber name="Rubber">
+                    <elasticity>0.8</elasticity>
+                    <staticFriction>1.4</staticFriction>
+                    <dynamicFriction>1</dynamicFriction>
+                    <rollingFriction>0.01</rollingFriction>
+                    <density>1.5</density>
+                  </Rubber>
+                </materials>
+              </materialManager>
+              <visualDebugging type="Boolean">false</visualDebugging>
+            </component>
+            <component type="com.pblabs.rendering2D.DisplayObjectScene" name="Scene0">
+              <sceneViewName>SceneView</sceneViewName>
+              <sceneAlignment type="com.pblabs.rendering2D.SceneAlignment">TOP_LEFT</sceneAlignment>
+              <layerIndex>0</layerIndex>
+              <zoom>1</zoom>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </position>
+              <ignoreTimeScale type="Boolean">true</ignoreTimeScale>
+              <minZoom type="Number">0.01</minZoom>
+              <maxZoom>1</maxZoom>
+              <layers type="Array"/>
+              <trackByOffset type="Boolean">true</trackByOffset>
+              <trackOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </trackOffset>
+            </component>
+            <component type="com.pblabs.rendering2D.DisplayObjectScene" name="Scene1">
+              <sceneViewName>SceneView</sceneViewName>
+              <sceneAlignment type="com.pblabs.rendering2D.SceneAlignment">TOP_LEFT</sceneAlignment>
+              <layerIndex>1</layerIndex>
+              <zoom>1</zoom>
+              <rotation>0</rotation>
+              <position type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </position>
+              <ignoreTimeScale type="Boolean">true</ignoreTimeScale>
+              <minZoom type="Number">0.01</minZoom>
+              <maxZoom>1</maxZoom>
+              <layers type="Array"/>
+              <trackByOffset type="Boolean">true</trackByOffset>
+              <trackOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </trackOffset>
+            </component>
+          </entity>
+          <view>
+            <name>SceneView</name>
+            <visible type="Boolean">true</visible>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+            <tabEnabled type="Boolean">false</tabEnabled>
+            <tabIndex>-1</tabIndex>
+            <mouseEnabled type="Boolean">true</mouseEnabled>
+            <doubleClickEnabled type="Boolean">false</doubleClickEnabled>
+            <soundTransform type="flash.media.SoundTransform">
+              <pan>0</pan>
+              <leftToLeft>1</leftToLeft>
+              <leftToRight>0</leftToRight>
+              <rightToRight>1</rightToRight>
+              <volume>1</volume>
+              <rightToLeft>0</rightToLeft>
+            </soundTransform>
+            <needsSoftKeyboard type="Boolean">false</needsSoftKeyboard>
+            <scaleZ>1</scaleZ>
+            <rotationX>0</rotationX>
+            <rotationY>0</rotationY>
+            <rotation>0</rotation>
+            <mouseChildren type="Boolean">true</mouseChildren>
+            <tabChildren type="Boolean">true</tabChildren>
+            <rotationZ>0</rotationZ>
+            <cacheAsBitmap type="Boolean">false</cacheAsBitmap>
+            <filters type="Array"/>
+            <blendMode>normal</blendMode>
+            <transform type="flash.geom.Transform">
+              <colorTransform type="flash.geom.ColorTransform">
+                <color>0</color>
+                <blueMultiplier>1</blueMultiplier>
+                <greenMultiplier>1</greenMultiplier>
+                <redMultiplier>1</redMultiplier>
+                <redOffset>0</redOffset>
+                <alphaMultiplier>1</alphaMultiplier>
+                <greenOffset>0</greenOffset>
+                <alphaOffset>0</alphaOffset>
+                <blueOffset>0</blueOffset>
+              </colorTransform>
+              <matrix type="flash.geom.Matrix">
+                <b>0</b>
+                <c>0</c>
+                <a>1</a>
+                <tx>0</tx>
+                <d>1</d>
+                <ty>0</ty>
+              </matrix>
+            </transform>
+            <buttonMode type="Boolean">false</buttonMode>
+            <alpha>1</alpha>
+            <scaleX>1</scaleX>
+            <useHandCursor type="Boolean">true</useHandCursor>
+            <scaleY>1</scaleY>
+            <width>1024</width>
+            <height>768</height>
+          </view>
+        </scene>
+      </level>
+    </levels>
+    <managers>
+      <objectTypeManager/>
+    </managers>
+    <templates/>
+  </game>
+  <dependencies>
+    <plugins>
+      <plugin uid="plugin::pbe.basic" signed="false" name="PBEPluginDescriptor" version="1.0"/>
+      <plugin uid="plugin::gbs_gamescore" signed="false" name="GamesCoreComponentsPlugin.swc" version="1.0"/>
+    </plugins>
+  </dependencies>
+  <resources>
+    <resource id="bgwelcome.jpg[class ImageResource]" fileName="bgWelcome.jpg" location="resources/bgWelcome.jpg">
+      <assetIds>
+        <asset id="E049C766-3754-AE05-C984-FCCD2DBC788E" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontscorevalue.fnt[class XMLResource]" fileName="fontScoreValue.fnt" location="resources/fontScoreValue.fnt">
+      <assetIds>
+        <asset id="DD21F9B9-D3C5-77A4-D3D5-FCCD2E33B9CD" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hurt.mp3[class SoundResource]" fileName="hurt.mp3" location="resources/hurt.mp3">
+      <assetIds>
+        <asset id="36892FB6-04DA-390B-5E4D-FCCD2E4D0284" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bglayer2.png[class ImageResource]" fileName="bgLayer2.png" location="resources/bgLayer2.png">
+      <assetIds>
+        <asset id="30D83629-8F2A-0117-B113-FCCD2E4F47E6" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="komika_axis.fnt[class XMLResource]" fileName="Komika_Axis.fnt" location="resources/Komika_Axis.fnt">
+      <assetIds>
+        <asset id="5FEB7BC7-059A-6030-41A0-FCCD2E1DEC9E" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontregular.png[class ImageResource]" fileName="fontRegular.png" location="resources/fontRegular.png">
+      <assetIds>
+        <asset id="A3E0FC30-E99C-F438-A29A-FCCD2E475692" className="ImageAsset"/>
+        <asset id="EAD1BA7C-0D37-FBC0-6EBD-FCCD2E359186" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontregular.fnt[class XMLResource]" fileName="fontRegular.fnt" location="resources/fontRegular.fnt">
+      <assetIds>
+        <asset id="EAD1BA7C-0D37-FBC0-6EBD-FCCD2E359186" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bglayer3.png[class ImageResource]" fileName="bgLayer3.png" location="resources/bgLayer3.png">
+      <assetIds>
+        <asset id="C801C510-620D-D9B2-7690-FCCD2E46A271" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bggame.mp3[class SoundResource]" fileName="bgGame.mp3" location="resources/bgGame.mp3">
+      <assetIds>
+        <asset id="1343FB77-3CE2-F6FE-18E5-FCCD2E4AE5E3" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hungryherosplash.jpg[class ImageResource]" fileName="HungryHeroSplash.jpg" location="resources/HungryHeroSplash.jpg">
+      <assetIds>
+        <asset id="AAA138C8-A437-01DB-1CFD-FCCD2E4EA33D" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontscorelabel.fnt[class XMLResource]" fileName="fontScoreLabel.fnt" location="resources/fontScoreLabel.fnt">
+      <assetIds>
+        <asset id="C3252A95-84C3-E266-B0DE-FCCD2E341057" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontscorevalue.png[class ImageResource]" fileName="fontScoreValue.png" location="resources/fontScoreValue.png">
+      <assetIds>
+        <asset id="DD21F9B9-D3C5-77A4-D3D5-FCCD2E33B9CD" className="FontSheetAsset"/>
+        <asset id="10154D59-E6FD-3B3A-1732-FCCD2E4726B1" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="pause_resumebutton.png[class ImageResource]" fileName="pause_resumeButton.png" location="resources/pause_resumeButton.png">
+      <assetIds>
+        <asset id="036F27B2-DEF9-E067-138B-FCCD2E4CE260" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="pause_aboutbutton.png[class ImageResource]" fileName="pause_aboutButton.png" location="resources/pause_aboutButton.png">
+      <assetIds>
+        <asset id="1B924D93-C2DA-B215-16BF-FCCD2E5024CF" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hungryherosheet.png[class ImageResource]" fileName="HungryHeroSheet.png" location="resources/HungryHeroSheet.png">
+      <assetIds>
+        <asset id="D19187FE-95D1-731A-AD03-FCCD2E3099FE" className="SpriteSheetAsset"/>
+        <asset id="347D8203-3EC0-A917-C6AD-FCCD2E4B7ABF" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hungryherosheet.json[class JSONResource]" fileName="HungryHeroSheet.json" location="resources/HungryHeroSheet.json">
+      <assetIds>
+        <asset id="D19187FE-95D1-731A-AD03-FCCD2E3099FE" className="SpriteSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="eat.mp3[class SoundResource]" fileName="eat.mp3" location="resources/eat.mp3">
+      <assetIds>
+        <asset id="AAB2318C-3884-A7BB-E98B-FCCD2E4AB2E2" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontscorelabel.png[class ImageResource]" fileName="fontScoreLabel.png" location="resources/fontScoreLabel.png">
+      <assetIds>
+        <asset id="C3252A95-84C3-E266-B0DE-FCCD2E341057" className="FontSheetAsset"/>
+        <asset id="9566D575-008E-BE39-BDE0-FCCD2E4BDD07" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="missing_graphic.png[class ImageResource]" fileName="missing_graphic.png" location="resources/missing_graphic.png">
+      <assetIds>
+        <asset id="B448483A-767E-1CB3-846C-FCCC296F92CC" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hit.mp3[class SoundResource]" fileName="hit.mp3" location="resources/hit.mp3">
+      <assetIds>
+        <asset id="CAD2209A-5F39-FFC3-A0EF-FCCD2E5049BD" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bgwelcome.mp3[class SoundResource]" fileName="bgWelcome.mp3" location="resources/bgWelcome.mp3">
+      <assetIds>
+        <asset id="EF894B42-A56C-C81D-2665-FCCD2E4F0328" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="font_score_results_white.fnt[class XMLResource]" fileName="font_score_results_white.fnt" location="resources/font_score_results_white.fnt">
+      <assetIds>
+        <asset id="F0360CF0-CEFD-BFEB-B86B-FCCD2E36C4EF" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="font_score_results_white.png[class ImageResource]" fileName="font_score_results_white.png" location="resources/font_score_results_white.png">
+      <assetIds>
+        <asset id="109F2BE2-A06E-53B1-D938-FCCD2E469E18" className="ImageAsset"/>
+        <asset id="F0360CF0-CEFD-BFEB-B86B-FCCD2E36C4EF" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="pause_quitbutton.png[class ImageResource]" fileName="pause_quitButton.png" location="resources/pause_quitButton.png">
+      <assetIds>
+        <asset id="CAEC7E60-FC83-00D9-2E6C-FCCD2E4D052E" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="komika_axis.png[class ImageResource]" fileName="Komika_Axis.png" location="resources/Komika_Axis.png">
+      <assetIds>
+        <asset id="5FEB7BC7-059A-6030-41A0-FCCD2E1DEC9E" className="FontSheetAsset"/>
+        <asset id="E6E2C74F-2462-FF04-0094-FCCD2E471548" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="skeleton_spritesheet.png[class ImageResource]" fileName="skeleton_spritesheet.png" location="resources/skeleton_spritesheet.png">
+      <assetIds>
+        <asset id="D6F5FECE-5938-1E18-E020-FCCC2A7021C0" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bglayer1.jpg[class ImageResource]" fileName="bgLayer1.jpg" location="resources/bgLayer1.jpg">
+      <assetIds>
+        <asset id="610AEB5C-C4AE-1C57-8B73-FCCD2E4CE391" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bglayer4.png[class ImageResource]" fileName="bgLayer4.png" location="resources/bgLayer4.png">
+      <assetIds>
+        <asset id="82C0CE72-9C42-628A-102F-FCCD2E4EA798" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="buttonhit.mp3[class SoundResource]" fileName="buttonhit.mp3" location="resources/buttonhit.mp3">
+      <assetIds>
+        <asset id="AD0B0973-D53C-B610-163C-FCCD2E4BB51B" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+  </resources>
+  <assets>
+    <gameAsset uid="B448483A-767E-1CB3-846C-FCCC296F92CC" resourceId="missing_graphic.png[class ImageResource]" pbeResourceId="missing_graphic.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="D6F5FECE-5938-1E18-E020-FCCC2A7021C0" resourceId="skeleton_spritesheet.png[class ImageResource]" pbeResourceId="skeleton_spritesheet.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="E049C766-3754-AE05-C984-FCCD2DBC788E" resourceId="bgwelcome.jpg[class ImageResource]" pbeResourceId="bgwelcome.jpg[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="C801C510-620D-D9B2-7690-FCCD2E46A271" resourceId="bglayer3.png[class ImageResource]" pbeResourceId="bglayer3.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="109F2BE2-A06E-53B1-D938-FCCD2E469E18" resourceId="font_score_results_white.png[class ImageResource]" pbeResourceId="font_score_results_white.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="E6E2C74F-2462-FF04-0094-FCCD2E471548" resourceId="komika_axis.png[class ImageResource]" pbeResourceId="komika_axis.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="A3E0FC30-E99C-F438-A29A-FCCD2E475692" resourceId="fontregular.png[class ImageResource]" pbeResourceId="fontregular.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="10154D59-E6FD-3B3A-1732-FCCD2E4726B1" resourceId="fontscorevalue.png[class ImageResource]" pbeResourceId="fontscorevalue.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="1343FB77-3CE2-F6FE-18E5-FCCD2E4AE5E3" resourceId="bggame.mp3[class SoundResource]" pbeResourceId="bggame.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="AAB2318C-3884-A7BB-E98B-FCCD2E4AB2E2" resourceId="eat.mp3[class SoundResource]" pbeResourceId="eat.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="AD0B0973-D53C-B610-163C-FCCD2E4BB51B" resourceId="buttonhit.mp3[class SoundResource]" pbeResourceId="buttonhit.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="9566D575-008E-BE39-BDE0-FCCD2E4BDD07" resourceId="fontscorelabel.png[class ImageResource]" pbeResourceId="fontscorelabel.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="347D8203-3EC0-A917-C6AD-FCCD2E4B7ABF" resourceId="hungryherosheet.png[class ImageResource]" pbeResourceId="hungryherosheet.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="036F27B2-DEF9-E067-138B-FCCD2E4CE260" resourceId="pause_resumebutton.png[class ImageResource]" pbeResourceId="pause_resumebutton.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="610AEB5C-C4AE-1C57-8B73-FCCD2E4CE391" resourceId="bglayer1.jpg[class ImageResource]" pbeResourceId="bglayer1.jpg[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="CAEC7E60-FC83-00D9-2E6C-FCCD2E4D052E" resourceId="pause_quitbutton.png[class ImageResource]" pbeResourceId="pause_quitbutton.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="36892FB6-04DA-390B-5E4D-FCCD2E4D0284" resourceId="hurt.mp3[class SoundResource]" pbeResourceId="hurt.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="82C0CE72-9C42-628A-102F-FCCD2E4EA798" resourceId="bglayer4.png[class ImageResource]" pbeResourceId="bglayer4.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="AAA138C8-A437-01DB-1CFD-FCCD2E4EA33D" resourceId="hungryherosplash.jpg[class ImageResource]" pbeResourceId="hungryherosplash.jpg[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="30D83629-8F2A-0117-B113-FCCD2E4F47E6" resourceId="bglayer2.png[class ImageResource]" pbeResourceId="bglayer2.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="EF894B42-A56C-C81D-2665-FCCD2E4F0328" resourceId="bgwelcome.mp3[class SoundResource]" pbeResourceId="bgwelcome.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="CAD2209A-5F39-FFC3-A0EF-FCCD2E5049BD" resourceId="hit.mp3[class SoundResource]" pbeResourceId="hit.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="1B924D93-C2DA-B215-16BF-FCCD2E5024CF" resourceId="pause_aboutbutton.png[class ImageResource]" pbeResourceId="pause_aboutbutton.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="5FEB7BC7-059A-6030-41A0-FCCD2E1DEC9E" resourceId="komika_axis.png[class ImageResource]" pbeResourceId="komika_axis.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="komika_axis.fnt[class XMLResource]" pbeDataResourceId="komika_axis.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+    <gameAsset uid="D19187FE-95D1-731A-AD03-FCCD2E3099FE" resourceId="hungryherosheet.png[class ImageResource]" pbeResourceId="hungryherosheet.png[class ImageResource]" type="com.gbs.gameeditor.common.model::SpriteSheetAsset" dataResourceId="hungryherosheet.json[class JSONResource]" pbeDataResourceId="hungryherosheet.json[class JSONResource]">
+      <assetType>SPRITESHEET</assetType>
+      <animations/>
+    </gameAsset>
+    <gameAsset uid="DD21F9B9-D3C5-77A4-D3D5-FCCD2E33B9CD" resourceId="fontscorevalue.png[class ImageResource]" pbeResourceId="fontscorevalue.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="fontscorevalue.fnt[class XMLResource]" pbeDataResourceId="fontscorevalue.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+    <gameAsset uid="C3252A95-84C3-E266-B0DE-FCCD2E341057" resourceId="fontscorelabel.png[class ImageResource]" pbeResourceId="fontscorelabel.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="fontscorelabel.fnt[class XMLResource]" pbeDataResourceId="fontscorelabel.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+    <gameAsset uid="EAD1BA7C-0D37-FBC0-6EBD-FCCD2E359186" resourceId="fontregular.png[class ImageResource]" pbeResourceId="fontregular.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="fontregular.fnt[class XMLResource]" pbeDataResourceId="fontregular.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+    <gameAsset uid="F0360CF0-CEFD-BFEB-B86B-FCCD2E36C4EF" resourceId="font_score_results_white.png[class ImageResource]" pbeResourceId="font_score_results_white.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="font_score_results_white.fnt[class XMLResource]" pbeDataResourceId="font_score_results_white.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+  </assets>
+</gbx>

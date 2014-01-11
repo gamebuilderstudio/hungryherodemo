@@ -1,0 +1,452 @@
+<gbx name="HungryHeroDemo" creationDate="Mon Dec 16 13:15:12 GMT-0600 2013" version="v0.9.Build-398">
+  <appSettings width="800" height="600">
+    <publishSettings current="DEFAULT">
+      <profiles>
+        <profile name="DEFAULT" targetPlatform=""/>
+      </profiles>
+    </publishSettings>
+  </appSettings>
+  <game engine="PBE" currentGameTypeId="pbe" lastLevel="0">
+    <globals>
+      <globalGameObject>
+        <gameObject name="Globals" uid="5AC7B278-4BC9-31CA-FB57-FCCC28A33D70" type="com.gbs.gameeditor.common.model.pbe.objects::PBEGameObject" descriptor="GlobalObject" sourceId="null">
+          <visible>true</visible>
+          <assetId>null</assetId>
+          <levelId>null</levelId>
+          <layerId>null</layerId>
+          <parentLayerId>null</parentLayerId>
+          <enableInteraction>true</enableInteraction>
+          <position x="0" y="0"/>
+          <volume x="0" y="0"/>
+          <gameEntity>
+            <metaData/>
+            <entity name="Globals">
+              <component type="com.pblabs.engine.components::DataComponent" name="Data"/>
+            </entity>
+          </gameEntity>
+        </gameObject>
+      </globalGameObject>
+    </globals>
+    <objects/>
+    <levels>
+      <level uid="D27B6160-815E-9FA7-A409-FCCC2858C701" index="0" displayName="Level 0" type="com.gbs.gameeditor.common.model.pbe.levels::PBELevel">
+        <layers>
+          <layer uid="3B903862-8AD1-C61E-C6D4-FCCC2873F43A" levelId="D27B6160-815E-9FA7-A409-FCCC2858C701" assetId="null" gameObjectId="null" sceneLayerName="Scene0" displayName="Scene View/Camera" stackOrder="0" duplicatable="false" opened="true" type="SCENE" locked="false"/>
+          <layer uid="05EAF0B5-7E64-3E3C-EAD9-FCCC28779C38" levelId="D27B6160-815E-9FA7-A409-FCCC2858C701" assetId="null" gameObjectId="null" sceneLayerName="SceneLayer0" displayName="Scene Layer - 0" stackOrder="0" duplicatable="true" opened="true" type="CONTAINER_GAMEOBJECTS" locked="false">
+            <parent type="com.gbs.gameeditor.common.model::LayerVO" uid="3B903862-8AD1-C61E-C6D4-FCCC2873F43A"/>
+          </layer>
+        </layers>
+        <scene>
+          <entity name="Scene_D27B6160-815E-9FA7-A409-FCCC2858C701">
+            <component type="com.pblabs.nape.NapeManagerComponent" name="SpatialManager">
+              <materialManager type="com.pblabs.nape.NapeMaterialManager">
+                <materials type="flash.utils.Dictionary" childType="com.pblabs.nape.MaterialVO">
+                  <Rubber name="Rubber">
+                    <elasticity>0.8</elasticity>
+                    <staticFriction>1.4</staticFriction>
+                    <dynamicFriction>1</dynamicFriction>
+                    <rollingFriction>0.01</rollingFriction>
+                    <density>1.5</density>
+                  </Rubber>
+                  <Sand name="Sand">
+                    <elasticity>-1</elasticity>
+                    <staticFriction>0.6</staticFriction>
+                    <dynamicFriction>0.45</dynamicFriction>
+                    <rollingFriction>16</rollingFriction>
+                    <density>1.6</density>
+                  </Sand>
+                  <Steel name="Steel">
+                    <elasticity>0.2</elasticity>
+                    <staticFriction>0.74</staticFriction>
+                    <dynamicFriction>0.57</dynamicFriction>
+                    <rollingFriction>0.001</rollingFriction>
+                    <density>7.8</density>
+                  </Steel>
+                  <Wood name="Wood">
+                    <elasticity>0.4</elasticity>
+                    <staticFriction>0.38</staticFriction>
+                    <dynamicFriction>0.2</dynamicFriction>
+                    <rollingFriction>0.005</rollingFriction>
+                    <density>0.7</density>
+                  </Wood>
+                  <Glass name="Glass">
+                    <elasticity>0.4</elasticity>
+                    <staticFriction>0.94</staticFriction>
+                    <dynamicFriction>0.4</dynamicFriction>
+                    <rollingFriction>0.002</rollingFriction>
+                    <density>2.6</density>
+                  </Glass>
+                  <Ice name="Ice">
+                    <elasticity>0.3</elasticity>
+                    <staticFriction>0.1</staticFriction>
+                    <dynamicFriction>0.03</dynamicFriction>
+                    <rollingFriction>0.0001</rollingFriction>
+                    <density>0.9</density>
+                  </Ice>
+                </materials>
+              </materialManager>
+              <gravity type="flash.geom.Point">
+                <y>600</y>
+                <x>0</x>
+              </gravity>
+              <worldBounds type="flash.geom.Rectangle">
+                <topLeft type="flash.geom.Point">
+                  <y>-5000</y>
+                  <x>-5000</x>
+                </topLeft>
+                <size type="flash.geom.Point">
+                  <y>10000</y>
+                  <x>10000</x>
+                </size>
+                <right>5000</right>
+                <left>-5000</left>
+                <top>-5000</top>
+                <bottom>5000</bottom>
+                <bottomRight type="flash.geom.Point">
+                  <y>5000</y>
+                  <x>5000</x>
+                </bottomRight>
+                <x>-5000</x>
+                <y>-5000</y>
+                <height>10000</height>
+                <width>10000</width>
+              </worldBounds>
+              <visualDebugging type="Boolean">false</visualDebugging>
+              <ignoreTimeScale type="Boolean">false</ignoreTimeScale>
+            </component>
+            <component type="com.pblabs.rendering2D.DisplayObjectScene" name="Scene0">
+              <sceneAlignment type="com.pblabs.rendering2D.SceneAlignment">TOP_LEFT</sceneAlignment>
+              <layerIndex>0</layerIndex>
+              <zoom>1</zoom>
+              <rotation>0</rotation>
+              <ignoreTimeScale type="Boolean">true</ignoreTimeScale>
+              <position type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </position>
+              <sceneViewName>SceneView</sceneViewName>
+              <minZoom type="Number">0.01</minZoom>
+              <maxZoom>1</maxZoom>
+              <layers type="Array"/>
+              <trackByOffset type="Boolean">true</trackByOffset>
+              <trackOffset type="flash.geom.Point">
+                <y>0</y>
+                <x>0</x>
+              </trackOffset>
+            </component>
+          </entity>
+          <view>
+            <name>SceneView</name>
+            <visible type="Boolean">true</visible>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+            <tabEnabled type="Boolean">false</tabEnabled>
+            <tabIndex>-1</tabIndex>
+            <mouseEnabled type="Boolean">true</mouseEnabled>
+            <doubleClickEnabled type="Boolean">false</doubleClickEnabled>
+            <soundTransform type="flash.media.SoundTransform">
+              <pan>0</pan>
+              <leftToLeft>1</leftToLeft>
+              <leftToRight>0</leftToRight>
+              <rightToRight>1</rightToRight>
+              <volume>1</volume>
+              <rightToLeft>0</rightToLeft>
+            </soundTransform>
+            <needsSoftKeyboard type="Boolean">false</needsSoftKeyboard>
+            <scaleZ>1</scaleZ>
+            <rotationX>0</rotationX>
+            <rotationY>0</rotationY>
+            <rotation>0</rotation>
+            <mouseChildren type="Boolean">true</mouseChildren>
+            <tabChildren type="Boolean">true</tabChildren>
+            <rotationZ>0</rotationZ>
+            <cacheAsBitmap type="Boolean">false</cacheAsBitmap>
+            <filters type="Array"/>
+            <blendMode>normal</blendMode>
+            <transform type="flash.geom.Transform">
+              <colorTransform type="flash.geom.ColorTransform">
+                <color>0</color>
+                <blueMultiplier>1</blueMultiplier>
+                <greenMultiplier>1</greenMultiplier>
+                <redMultiplier>1</redMultiplier>
+                <redOffset>0</redOffset>
+                <alphaMultiplier>1</alphaMultiplier>
+                <greenOffset>0</greenOffset>
+                <alphaOffset>0</alphaOffset>
+                <blueOffset>0</blueOffset>
+              </colorTransform>
+              <matrix type="flash.geom.Matrix">
+                <b>0</b>
+                <c>0</c>
+                <a>1</a>
+                <tx>0</tx>
+                <d>1</d>
+                <ty>0</ty>
+              </matrix>
+            </transform>
+            <buttonMode type="Boolean">false</buttonMode>
+            <alpha>1</alpha>
+            <scaleX>1</scaleX>
+            <useHandCursor type="Boolean">true</useHandCursor>
+            <scaleY>1</scaleY>
+            <width>800</width>
+            <height>600</height>
+          </view>
+        </scene>
+      </level>
+    </levels>
+    <managers>
+      <objectTypeManager/>
+    </managers>
+    <templates/>
+  </game>
+  <dependencies>
+    <plugins>
+      <plugin uid="plugin::pbe.basic" signed="false" name="PBEPluginDescriptor" version="1.0"/>
+    </plugins>
+  </dependencies>
+  <resources>
+    <resource id="fontregular.fnt[class XMLResource]" fileName="fontRegular.fnt" location="resources/fontRegular.fnt">
+      <assetIds>
+        <asset id="EAD1BA7C-0D37-FBC0-6EBD-FCCD2E359186" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="pause_resumebutton.png[class ImageResource]" fileName="pause_resumeButton.png" location="resources/pause_resumeButton.png">
+      <assetIds>
+        <asset id="036F27B2-DEF9-E067-138B-FCCD2E4CE260" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bgwelcome.mp3[class SoundResource]" fileName="bgWelcome.mp3" location="resources/bgWelcome.mp3">
+      <assetIds>
+        <asset id="EF894B42-A56C-C81D-2665-FCCD2E4F0328" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="buttonhit.mp3[class SoundResource]" fileName="buttonhit.mp3" location="resources/buttonhit.mp3">
+      <assetIds>
+        <asset id="AD0B0973-D53C-B610-163C-FCCD2E4BB51B" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bglayer3.png[class ImageResource]" fileName="bgLayer3.png" location="resources/bgLayer3.png">
+      <assetIds>
+        <asset id="C801C510-620D-D9B2-7690-FCCD2E46A271" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hungryherosplash.jpg[class ImageResource]" fileName="HungryHeroSplash.jpg" location="resources/HungryHeroSplash.jpg">
+      <assetIds>
+        <asset id="AAA138C8-A437-01DB-1CFD-FCCD2E4EA33D" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hungryherosheet.json[class JSONResource]" fileName="HungryHeroSheet.json" location="resources/HungryHeroSheet.json">
+      <assetIds>
+        <asset id="D19187FE-95D1-731A-AD03-FCCD2E3099FE" className="SpriteSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="skeleton_spritesheet.png[class ImageResource]" fileName="skeleton_spritesheet.png" location="resources/skeleton_spritesheet.png">
+      <assetIds>
+        <asset id="D6F5FECE-5938-1E18-E020-FCCC2A7021C0" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontscorevalue.png[class ImageResource]" fileName="fontScoreValue.png" location="resources/fontScoreValue.png">
+      <assetIds>
+        <asset id="10154D59-E6FD-3B3A-1732-FCCD2E4726B1" className="ImageAsset"/>
+        <asset id="DD21F9B9-D3C5-77A4-D3D5-FCCD2E33B9CD" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="eat.mp3[class SoundResource]" fileName="eat.mp3" location="resources/eat.mp3">
+      <assetIds>
+        <asset id="AAB2318C-3884-A7BB-E98B-FCCD2E4AB2E2" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="font_score_results_white.png[class ImageResource]" fileName="font_score_results_white.png" location="resources/font_score_results_white.png">
+      <assetIds>
+        <asset id="F0360CF0-CEFD-BFEB-B86B-FCCD2E36C4EF" className="FontSheetAsset"/>
+        <asset id="109F2BE2-A06E-53B1-D938-FCCD2E469E18" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontscorevalue.fnt[class XMLResource]" fileName="fontScoreValue.fnt" location="resources/fontScoreValue.fnt">
+      <assetIds>
+        <asset id="DD21F9B9-D3C5-77A4-D3D5-FCCD2E33B9CD" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="pause_quitbutton.png[class ImageResource]" fileName="pause_quitButton.png" location="resources/pause_quitButton.png">
+      <assetIds>
+        <asset id="CAEC7E60-FC83-00D9-2E6C-FCCD2E4D052E" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hurt.mp3[class SoundResource]" fileName="hurt.mp3" location="resources/hurt.mp3">
+      <assetIds>
+        <asset id="36892FB6-04DA-390B-5E4D-FCCD2E4D0284" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bglayer4.png[class ImageResource]" fileName="bgLayer4.png" location="resources/bgLayer4.png">
+      <assetIds>
+        <asset id="82C0CE72-9C42-628A-102F-FCCD2E4EA798" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bgwelcome.jpg[class ImageResource]" fileName="bgWelcome.jpg" location="resources/bgWelcome.jpg">
+      <assetIds>
+        <asset id="E049C766-3754-AE05-C984-FCCD2DBC788E" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bglayer2.png[class ImageResource]" fileName="bgLayer2.png" location="resources/bgLayer2.png">
+      <assetIds>
+        <asset id="30D83629-8F2A-0117-B113-FCCD2E4F47E6" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="font_score_results_white.fnt[class XMLResource]" fileName="font_score_results_white.fnt" location="resources/font_score_results_white.fnt">
+      <assetIds>
+        <asset id="F0360CF0-CEFD-BFEB-B86B-FCCD2E36C4EF" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bggame.mp3[class SoundResource]" fileName="bgGame.mp3" location="resources/bgGame.mp3">
+      <assetIds>
+        <asset id="1343FB77-3CE2-F6FE-18E5-FCCD2E4AE5E3" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontscorelabel.fnt[class XMLResource]" fileName="fontScoreLabel.fnt" location="resources/fontScoreLabel.fnt">
+      <assetIds>
+        <asset id="C3252A95-84C3-E266-B0DE-FCCD2E341057" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontscorelabel.png[class ImageResource]" fileName="fontScoreLabel.png" location="resources/fontScoreLabel.png">
+      <assetIds>
+        <asset id="C3252A95-84C3-E266-B0DE-FCCD2E341057" className="FontSheetAsset"/>
+        <asset id="9566D575-008E-BE39-BDE0-FCCD2E4BDD07" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hungryherosheet.png[class ImageResource]" fileName="HungryHeroSheet.png" location="resources/HungryHeroSheet.png">
+      <assetIds>
+        <asset id="D19187FE-95D1-731A-AD03-FCCD2E3099FE" className="SpriteSheetAsset"/>
+        <asset id="347D8203-3EC0-A917-C6AD-FCCD2E4B7ABF" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="bglayer1.jpg[class ImageResource]" fileName="bgLayer1.jpg" location="resources/bgLayer1.jpg">
+      <assetIds>
+        <asset id="610AEB5C-C4AE-1C57-8B73-FCCD2E4CE391" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="hit.mp3[class SoundResource]" fileName="hit.mp3" location="resources/hit.mp3">
+      <assetIds>
+        <asset id="CAD2209A-5F39-FFC3-A0EF-FCCD2E5049BD" className="SoundAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="fontregular.png[class ImageResource]" fileName="fontRegular.png" location="resources/fontRegular.png">
+      <assetIds>
+        <asset id="A3E0FC30-E99C-F438-A29A-FCCD2E475692" className="ImageAsset"/>
+        <asset id="EAD1BA7C-0D37-FBC0-6EBD-FCCD2E359186" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="missing_graphic.png[class ImageResource]" fileName="missing_graphic.png" location="resources/missing_graphic.png">
+      <assetIds>
+        <asset id="B448483A-767E-1CB3-846C-FCCC296F92CC" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="pause_aboutbutton.png[class ImageResource]" fileName="pause_aboutButton.png" location="resources/pause_aboutButton.png">
+      <assetIds>
+        <asset id="1B924D93-C2DA-B215-16BF-FCCD2E5024CF" className="ImageAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="komika_axis.png[class ImageResource]" fileName="Komika_Axis.png" location="resources/Komika_Axis.png">
+      <assetIds>
+        <asset id="E6E2C74F-2462-FF04-0094-FCCD2E471548" className="ImageAsset"/>
+        <asset id="5FEB7BC7-059A-6030-41A0-FCCD2E1DEC9E" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+    <resource id="komika_axis.fnt[class XMLResource]" fileName="Komika_Axis.fnt" location="resources/Komika_Axis.fnt">
+      <assetIds>
+        <asset id="5FEB7BC7-059A-6030-41A0-FCCD2E1DEC9E" className="FontSheetAsset"/>
+      </assetIds>
+    </resource>
+  </resources>
+  <assets>
+    <gameAsset uid="B448483A-767E-1CB3-846C-FCCC296F92CC" resourceId="missing_graphic.png[class ImageResource]" pbeResourceId="missing_graphic.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="D6F5FECE-5938-1E18-E020-FCCC2A7021C0" resourceId="skeleton_spritesheet.png[class ImageResource]" pbeResourceId="skeleton_spritesheet.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="E049C766-3754-AE05-C984-FCCD2DBC788E" resourceId="bgwelcome.jpg[class ImageResource]" pbeResourceId="bgwelcome.jpg[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="C801C510-620D-D9B2-7690-FCCD2E46A271" resourceId="bglayer3.png[class ImageResource]" pbeResourceId="bglayer3.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="109F2BE2-A06E-53B1-D938-FCCD2E469E18" resourceId="font_score_results_white.png[class ImageResource]" pbeResourceId="font_score_results_white.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="E6E2C74F-2462-FF04-0094-FCCD2E471548" resourceId="komika_axis.png[class ImageResource]" pbeResourceId="komika_axis.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="A3E0FC30-E99C-F438-A29A-FCCD2E475692" resourceId="fontregular.png[class ImageResource]" pbeResourceId="fontregular.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="10154D59-E6FD-3B3A-1732-FCCD2E4726B1" resourceId="fontscorevalue.png[class ImageResource]" pbeResourceId="fontscorevalue.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="1343FB77-3CE2-F6FE-18E5-FCCD2E4AE5E3" resourceId="bggame.mp3[class SoundResource]" pbeResourceId="bggame.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="AAB2318C-3884-A7BB-E98B-FCCD2E4AB2E2" resourceId="eat.mp3[class SoundResource]" pbeResourceId="eat.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="AD0B0973-D53C-B610-163C-FCCD2E4BB51B" resourceId="buttonhit.mp3[class SoundResource]" pbeResourceId="buttonhit.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="9566D575-008E-BE39-BDE0-FCCD2E4BDD07" resourceId="fontscorelabel.png[class ImageResource]" pbeResourceId="fontscorelabel.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="347D8203-3EC0-A917-C6AD-FCCD2E4B7ABF" resourceId="hungryherosheet.png[class ImageResource]" pbeResourceId="hungryherosheet.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="036F27B2-DEF9-E067-138B-FCCD2E4CE260" resourceId="pause_resumebutton.png[class ImageResource]" pbeResourceId="pause_resumebutton.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="610AEB5C-C4AE-1C57-8B73-FCCD2E4CE391" resourceId="bglayer1.jpg[class ImageResource]" pbeResourceId="bglayer1.jpg[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="CAEC7E60-FC83-00D9-2E6C-FCCD2E4D052E" resourceId="pause_quitbutton.png[class ImageResource]" pbeResourceId="pause_quitbutton.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="36892FB6-04DA-390B-5E4D-FCCD2E4D0284" resourceId="hurt.mp3[class SoundResource]" pbeResourceId="hurt.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="82C0CE72-9C42-628A-102F-FCCD2E4EA798" resourceId="bglayer4.png[class ImageResource]" pbeResourceId="bglayer4.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="AAA138C8-A437-01DB-1CFD-FCCD2E4EA33D" resourceId="hungryherosplash.jpg[class ImageResource]" pbeResourceId="hungryherosplash.jpg[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="30D83629-8F2A-0117-B113-FCCD2E4F47E6" resourceId="bglayer2.png[class ImageResource]" pbeResourceId="bglayer2.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="EF894B42-A56C-C81D-2665-FCCD2E4F0328" resourceId="bgwelcome.mp3[class SoundResource]" pbeResourceId="bgwelcome.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="CAD2209A-5F39-FFC3-A0EF-FCCD2E5049BD" resourceId="hit.mp3[class SoundResource]" pbeResourceId="hit.mp3[class MP3Resource]" type="com.gbs.gameeditor.common.model::SoundAsset">
+      <assetType>SOUND</assetType>
+    </gameAsset>
+    <gameAsset uid="1B924D93-C2DA-B215-16BF-FCCD2E5024CF" resourceId="pause_aboutbutton.png[class ImageResource]" pbeResourceId="pause_aboutbutton.png[class ImageResource]" type="com.gbs.gameeditor.common.model::ImageAsset">
+      <assetType>BITMAP</assetType>
+    </gameAsset>
+    <gameAsset uid="5FEB7BC7-059A-6030-41A0-FCCD2E1DEC9E" resourceId="komika_axis.png[class ImageResource]" pbeResourceId="komika_axis.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="komika_axis.fnt[class XMLResource]" pbeDataResourceId="komika_axis.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+    <gameAsset uid="D19187FE-95D1-731A-AD03-FCCD2E3099FE" resourceId="hungryherosheet.png[class ImageResource]" pbeResourceId="hungryherosheet.png[class ImageResource]" type="com.gbs.gameeditor.common.model::SpriteSheetAsset" dataResourceId="hungryherosheet.json[class JSONResource]" pbeDataResourceId="hungryherosheet.json[class JSONResource]">
+      <assetType>SPRITESHEET</assetType>
+      <animations/>
+    </gameAsset>
+    <gameAsset uid="DD21F9B9-D3C5-77A4-D3D5-FCCD2E33B9CD" resourceId="fontscorevalue.png[class ImageResource]" pbeResourceId="fontscorevalue.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="fontscorevalue.fnt[class XMLResource]" pbeDataResourceId="fontscorevalue.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+    <gameAsset uid="C3252A95-84C3-E266-B0DE-FCCD2E341057" resourceId="fontscorelabel.png[class ImageResource]" pbeResourceId="fontscorelabel.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="fontscorelabel.fnt[class XMLResource]" pbeDataResourceId="fontscorelabel.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+    <gameAsset uid="EAD1BA7C-0D37-FBC0-6EBD-FCCD2E359186" resourceId="fontregular.png[class ImageResource]" pbeResourceId="fontregular.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="fontregular.fnt[class XMLResource]" pbeDataResourceId="fontregular.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+    <gameAsset uid="F0360CF0-CEFD-BFEB-B86B-FCCD2E36C4EF" resourceId="font_score_results_white.png[class ImageResource]" pbeResourceId="font_score_results_white.png[class ImageResource]" type="com.gbs.gameeditor.common.model::FontSheetAsset" dataResourceId="font_score_results_white.fnt[class XMLResource]" pbeDataResourceId="font_score_results_white.fnt[class DataResource]">
+      <assetType>FONTSHEET</assetType>
+    </gameAsset>
+  </assets>
+</gbx>
